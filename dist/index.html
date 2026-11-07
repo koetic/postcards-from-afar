@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1eee7">
+  <meta name="description" content="上传一张照片，写下此刻。每经过一个人，画面模糊一点，故事多一句。制作一张会漂流的电子明信片。">
+  <title>来自远方的明信片｜让照片带着故事漂流</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/qrcode.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <div id="homeView">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="来自远方的明信片首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="11" width="24" height="18" rx="1.5"/><path d="m9 13 11 9 11-9M9 27l8-7m14 7-8-7"/></svg>
+        </span>
+        <span>来自远方的明信片<small>POSTCARDS FROM AFAR</small></span>
+      </a>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="#journey">漂流故事</a>
+        <a href="#about">如何漂流</a>
+      </nav>
+      <button class="button button-ink button-small" data-start>寄出一张 <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> 一张照片，一段未知的旅程</p>
+          <h1>把一瞬，<br><em>寄向远方。</em></h1>
+          <p class="hero-intro">上传随手拍，写下此刻。<br class="desktop-break">每经过一个人，画面淡一点，故事多一句。</p>
+          <div class="hero-actions">
+            <button class="button button-coral" data-start>寄出一张明信片 <span aria-hidden="true">→</span></button>
+            <a class="text-link" href="#journey">看看它如何漂流 <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v11H5z"/></svg>
+            照片仅在本机处理，无需登录
+          </div>
+        </div>
+
+        <div class="drift-stage" aria-label="三段明信片示例旅程">
+          <div class="postmark postmark-large" aria-hidden="true"><span>远方</span><small>07 NOV 2026</small></div>
+          <span class="route-line route-line-one" aria-hidden="true"></span>
+          <span class="route-line route-line-two" aria-hidden="true"></span>
+
+          <article class="drift-card drift-card-one" data-demo="rainbow" tabindex="0" role="button" aria-label="打开彩虹明信片的示例旅程">
+            <span class="paper-clip" aria-hidden="true"></span>
+            <div class="drift-photo"><img src="assets/rainbow.webp" alt="云层间出现的一抹彩虹" width="1600" height="1065"></div>
+            <div class="drift-caption"><p>“把今天遇见的好运，<br>分你一半。”</p><span>第一站 · 云上的来信</span></div>
+            <span class="mini-stamp" aria-hidden="true">01</span>
+          </article>
+
+          <article class="drift-card drift-card-two" data-demo="prayer" tabindex="0" role="button" aria-label="打开草原明信片的示例旅程">
+            <div class="drift-photo"><img src="assets/prayer-flags.webp" alt="草原、湖泊与彩色经幡" width="1600" height="1067"></div>
+            <div class="drift-caption"><p>“风吹过这里，<br>也吹过想你的时候。”</p><span>已路过 3 个人</span></div>
+          </article>
+
+          <article class="drift-card drift-card-three" data-demo="grass" tabindex="0" role="button" aria-label="打开草地明信片的示例旅程">
+            <div class="drift-photo"><img src="assets/grass-doll.webp" alt="草地上坐着的蓝色玩偶" width="1600" height="1067"></div>
+            <div class="drift-caption"><p>“今天什么也没做，<br>但很开心。”</p><span>第二站 · 草地漫游</span></div>
+            <span class="mini-stamp mini-stamp-coral" aria-hidden="true">02</span>
+          </article>
+          <p class="drift-hint"><span aria-hidden="true">↖</span> 点击一张，读读沿途的话</p>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true"><div>A PHOTO · A FEW WORDS · A LONG JOURNEY · 照片会褪色，故事会留下 · A PHOTO · A FEW WORDS · A LONG JOURNEY · 照片会褪色，故事会留下 ·&nbsp;</div></div>
+
+      <section class="journey-section section-wrap" id="journey">
+        <div class="section-heading">
+          <p class="section-kicker">01 / 漂流故事</p>
+          <div><h2>画面慢慢模糊，<br>故事慢慢清晰。</h2><p>每一次转寄，照片会失去一些细节，<br>也会多带走一个人的心情。</p></div>
+        </div>
+        <p class="sample-label"><span></span> 以下为示例旅程，由真实照片生成</p>
+        <div class="journey-grid">
+          <button class="journey-story" data-demo="prayer">
+            <span class="story-visual"><canvas data-pixel-src="assets/prayer-flags.webp" data-pixel-size="8" aria-label="草原经幡的八乘八像素画"></canvas><span class="station-badge">03 站</span></span>
+            <span class="story-copy"><span class="story-meta">草原 → 海边 → 你的城市</span><strong>风把祝福带到下一站</strong><span class="story-excerpt">“愿你永远有出发的勇气。”</span><span class="story-more">展开沿途留言 <b>→</b></span></span>
+          </button>
+          <button class="journey-story" data-demo="grass">
+            <span class="story-visual"><canvas data-pixel-src="assets/grass-doll.webp" data-pixel-size="12" aria-label="草地玩偶的十二乘十二像素画"></canvas><span class="station-badge">02 站</span></span>
+            <span class="story-copy"><span class="story-meta">一个无所事事的下午</span><strong>把平凡的一天寄给你</strong><span class="story-excerpt">“希望你也有晒晒太阳的心情。”</span><span class="story-more">展开沿途留言 <b>→</b></span></span>
+          </button>
+          <button class="journey-story" data-demo="rainbow">
+            <span class="story-visual"><canvas data-pixel-src="assets/rainbow.webp" data-pixel-size="4" aria-label="彩虹的四乘四像素画"></canvas><span class="station-badge">04 站</span></span>
+            <span class="story-copy"><span class="story-meta">一场雨之后的礼物</span><strong>好运在陌生人之间传递</strong><span class="story-excerpt">“看见它的人，都会幸运一点。”</span><span class="story-more">展开沿途留言 <b>→</b></span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="how-section" id="about">
+        <div class="section-wrap">
+          <div class="section-heading section-heading-light">
+            <p class="section-kicker">02 / 如何漂流</p>
+            <div><h2>像寄信一样简单，<br>像相遇一样奇妙。</h2></div>
+          </div>
+          <ol class="how-steps">
+            <li><span class="step-number">01</span><div class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="10" width="34" height="28" rx="2"/><circle cx="31" cy="19" r="4"/><path d="m10 35 10-11 7 7 5-5 9 9"/></svg></div><h3>留下此刻</h3><p>选一张随手拍，写下想说的话。照片不会上传到服务器。</p></li>
+            <li><span class="step-number">02</span><div class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 13h32v24H8zM8 14l16 13 16-13M8 36l12-12m20 12L28 24"/></svg></div><h3>寄出清晰的一刻</h3><p>保存带二维码的明信片，把图片发给朋友或分享到社交平台。</p></li>
+            <li><span class="step-number">03</span><div class="step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M9 34c7-18 17 4 29-17M29 17h9v9"/><path d="M9 12v24h30"/></svg></div><h3>让故事继续</h3><p>对方扫码留下新的话，再寄出更模糊的一代。16 格，慢慢变成一团记忆的颜色。</p></li>
+          </ol>
+          <blockquote>“照片会忘记细节，文字会记得我们来过。”</blockquote>
+        </div>
+      </section>
+
+      <section class="creator-section section-wrap" id="create">
+        <div class="section-heading creator-heading">
+          <p class="section-kicker">03 / 开始漂流</p>
+          <div><h2>此刻，你想寄出什么？</h2><p>不需要完美构图，真实的一瞬间就足够。</p></div>
+        </div>
+        <div class="creator-shell">
+          <div class="editor-panel">
+            <div class="field-label"><span>01</span><label for="photoInput">选择一张照片</label></div>
+            <label class="upload-zone" id="uploadZone" for="photoInput">
+              <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+              <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 22V6m-6 6 6-6 6 6M6 20v6h20v-6"/></svg></span>
+              <strong id="uploadTitle">把此刻放在这里</strong>
+              <span id="uploadHint">点击选择或拖入照片 · JPG / PNG / WebP</span>
+            </label>
+            <div class="sample-action"><span>没有合适的照片？</span><button type="button" id="sampleButton">用一张彩虹示例 <span aria-hidden="true">↗</span></button></div>
+
+            <div class="message-field">
+              <div class="field-label"><span>02</span><label for="messageInput">写下此刻</label><small><b id="messageCount">0</b> / 120</small></div>
+              <textarea id="messageInput" maxlength="120" rows="4" placeholder="今天路过一朵很好看的云，想把它寄给你……"></textarea>
+            </div>
+            <div class="signature-field"><label for="signatureInput">落款 <small>选填</small></label><input id="signatureInput" maxlength="16" placeholder="比如：阿远"></div>
+            <button class="button button-coral create-button" id="createButton" disabled>生成我的明信片 <span aria-hidden="true">→</span></button>
+            <p class="form-note">二维码只携带像素化照片和文字，不包含清晰原图。</p>
+          </div>
+
+          <div class="preview-panel">
+            <div class="preview-heading"><span>实时预览</span><span>第一站 / THE BEGINNING</span></div>
+            <div class="postcard-preview">
+              <div class="preview-image">
+                <img class="preview-backdrop" id="previewBackdrop" alt="" aria-hidden="true" hidden>
+                <img class="preview-foreground" id="previewPhoto" alt="明信片照片预览" hidden>
+                <div class="preview-placeholder" id="previewPlaceholder"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="8" y="10" width="32" height="27" rx="1"/><circle cx="31" cy="19" r="4"/><path d="m10 34 10-11 7 7 5-5 8 9"/></svg><span>你的照片会出现在这里</span></div>
+                <span class="preview-postmark" aria-hidden="true">远方<br><small>POST</small></span>
+              </div>
+              <div class="preview-copy"><p id="previewMessage">写下一段话，让这张照片有目的地。</p><div><span id="previewSignature">— 未署名</span><span>FROM AFAR</span></div></div>
+            </div>
+            <p class="preview-note"><span aria-hidden="true">✦</span> 保存时自动加入二维码，第一站的照片保持清晰。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="11" width="24" height="18" rx="1.5"/><path d="m9 13 11 9 11-9"/></svg></span><span>来自远方的明信片</span></a><p>愿每一次抵达，都有新的故事。</p><span>MADE FOR THE JOURNEY · 2026</span></footer>
+  </div>
+
+  <div id="receiverView" hidden>
+    <header class="site-header receiver-header">
+      <button class="brand brand-button" id="homeButton" aria-label="返回首页"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="11" width="24" height="18" rx="1.5"/><path d="m9 13 11 9 11-9"/></svg></span><span>来自远方的明信片<small>POSTCARDS FROM AFAR</small></span></button>
+      <button class="text-link" id="newFromReceiver">我也寄一张 <span aria-hidden="true">↗</span></button>
+    </header>
+    <main class="receiver-main" id="receiverMain">
+      <section class="receiver-intro"><p class="eyebrow"><span></span> 一封正在漂流的明信片</p><h1>这张明信片，<br>已经路过 <em id="receiverCount">1</em> 个人。</h1><p>你看到的不是褪色的照片，而是它走过的距离。</p></section>
+      <section class="receiver-layout" aria-label="明信片与沿途留言">
+        <div class="received-visual"><div class="received-postcard"><canvas id="receivedCanvas" width="960" height="720" aria-label="漂流后变成像素色的明信片照片"></canvas><div class="received-caption"><span id="receivedStation">第 1 站</span><span>POSTCARD FROM AFAR</span></div></div><p class="received-size" id="receivedSize">16 × 16 · 色彩还在，细节已成回忆</p></div>
+        <div class="message-panel"><div class="message-panel-heading"><span>沿途留下的话</span><span id="messageTotal">01 段留言</span></div><ol class="message-timeline" id="messageTimeline"></ol><button class="button button-coral" id="continueButton">接过明信片，留一句 <span aria-hidden="true">→</span></button><button class="text-link save-current" id="saveCurrent">保存这一站 <span aria-hidden="true">↓</span></button></div>
+      </section>
+      <section class="continue-composer" id="continueComposer" hidden>
+        <div><p class="section-kicker">下一站，由你续写</p><h2>给这段旅程，<br>再添一句话。</h2><p>保存后，照片会变得更模糊，你的留言会和之前的话一起抵达下一站。</p></div>
+        <div class="continue-fields"><div class="message-field"><div class="field-label"><label for="continueMessage">你想留下什么？</label><small><b id="continueCount">0</b> / 120</small></div><textarea id="continueMessage" maxlength="120" rows="4" placeholder="轮到我啦。希望看到这张明信片的你……"></textarea></div><div class="signature-field"><label for="continueSignature">落款 <small>选填</small></label><input id="continueSignature" maxlength="16" placeholder="比如：小满"></div><button class="button button-coral" id="forwardButton">生成下一站明信片 <span aria-hidden="true">→</span></button></div>
+      </section>
+      <p class="receiver-footnote">每次继续寄出，照片会从 16×16 变为 12×12、8×8……，留言则完整保留。</p>
+    </main>
+  </div>
+
+  <dialog class="demo-dialog" id="demoDialog">
+    <button class="dialog-close" data-close="demoDialog" aria-label="关闭示例旅程">×</button>
+    <div class="demo-layout"><div class="demo-visual"><canvas id="demoCanvas" width="720" height="540" aria-label="示例明信片像素画"></canvas><span id="demoStation">示例旅程 · 第 3 站</span></div><div class="demo-content"><p class="section-kicker">一段漂流的记忆</p><h2 id="demoTitle">风把祝福带到下一站</h2><ol class="message-timeline" id="demoMessages"></ol><div class="demo-actions"><button class="button button-ink" id="useDemoPhoto">用这张照片寄出 <span aria-hidden="true">→</span></button><button class="button button-outline" id="uploadOwnPhoto">上传我的照片</button></div><p class="demo-action-note">沿用这张原图，或换成你的随手拍，都将从清晰的第一站开始。</p></div></div>
+  </dialog>
+
+  <dialog class="result-dialog" id="resultDialog">
+    <button class="dialog-close" data-close="resultDialog" aria-label="关闭生成结果">×</button>
+    <p class="section-kicker">你的明信片准备好了</p><h2 id="resultTitle">远方，从这里开始。</h2>
+    <div class="result-layout"><div class="result-image-wrap"><img id="resultImage" alt="生成好的明信片，包含照片、寄语和二维码"></div><div class="qr-panel"><div class="qr-code" id="qrCode" aria-label="明信片传递链接二维码"></div><strong>扫码，留下下一句话</strong><p id="resultDescription">对方看到的是像素版照片，保存的这张图片仍保持清晰。</p></div></div>
+    <div class="result-actions"><button class="button button-coral" id="downloadButton">保存明信片 <span aria-hidden="true">↓</span></button><button class="button button-outline" id="shareButton">分享图片 <span aria-hidden="true">↗</span></button><button class="text-link" id="copyLink">复制传递链接</button></div>
+    <p class="result-tip">把图片发给朋友，请对方扫码续写。每次生成下一站，都会出现一个新的二维码。</p><button class="make-another" id="makeAnother">再制作一张新的明信片</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
